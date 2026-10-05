@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.firebase/
+*.tsbuildinfo
+.DS_Store
