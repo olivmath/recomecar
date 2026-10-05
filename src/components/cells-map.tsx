@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import * as L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "maplibre-gl";
-import "@maplibre/maplibre-gl-leaflet";
+import { maplibreGL } from "@maplibre/maplibre-gl-leaflet";
 import type { Cell } from "../data/cells";
 
 type Props = { cells: Cell[]; selected: Cell | null; onSelect: (cell: Cell) => void };
@@ -11,7 +11,7 @@ export function CellsMap({ cells, selected, onSelect }: Props) {
   const node = useRef<HTMLDivElement>(null); const map = useRef<L.Map | null>(null); const markers = useRef<L.LayerGroup | null>(null);
   useEffect(() => { if (!node.current || map.current) return; const instance = L.map(node.current, { zoomControl: false, attributionControl: true, preferCanvas: true });
     L.control.zoom({ position: "bottomright" }).addTo(instance);
-    L.maplibreGL({ style: "https://tiles.openfreemap.org/styles/liberty" }).addTo(instance);
+    maplibreGL({ style: "https://tiles.openfreemap.org/styles/liberty" }).addTo(instance);
     map.current = instance; markers.current = L.layerGroup().addTo(instance); return () => { instance.remove(); map.current = null; };
   }, []);
   useEffect(() => { if (!map.current || !markers.current) return; markers.current.clearLayers(); const bounds: [number, number][] = [];
