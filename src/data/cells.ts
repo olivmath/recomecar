@@ -12,12 +12,12 @@ export type CellIcon =
 export type Cell = {
   id: string;
   name: string;
-  day: string;
-  time: string;
+  day?: string;
+  time?: string;
   address: string;
   description: string;
   coordinates: [number, number];
-  image: string;
+  image?: string;
   color: string;
   icon: CellIcon;
   whatsapp?: string;
@@ -29,12 +29,13 @@ export const cells: Cell[] = [
     name: "Célula Ekbaloo",
     day: "Segunda-feira",
     time: "20h",
-    address: "Rua Medeiros de Albuquerque, 75 · Caminho Novo, Palhoça - SC",
+    address: "Rua Orquídea, 06 · São Sebastião, Palhoça - SC",
     description: "Um encontro para criar laços, crescer na fé e caminhar junto.",
     coordinates: [-27.6474, -48.6754],
     image: "/ekbaloo.jpg",
     color: "#D85A3C",
     icon: "heart",
+    whatsapp: "5548999979631",
   },
   {
     id: "asaph",
@@ -47,6 +48,7 @@ export const cells: Cell[] = [
     image: "/asaph.jpg",
     color: "#B45309",
     icon: "flame",
+    whatsapp: "5548920035249",
   },
   {
     id: "safe",
@@ -72,6 +74,7 @@ export const cells: Cell[] = [
     image: "/israel.jpg",
     color: "#4F46E5",
     icon: "star",
+    whatsapp: "5551984399136",
   },
   {
     id: "adonai",
@@ -84,6 +87,7 @@ export const cells: Cell[] = [
     image: "/adonai.jpg",
     color: "#C2410C",
     icon: "sun",
+    whatsapp: "5548996378534",
   },
   {
     id: "amor-perfeito",
@@ -96,29 +100,32 @@ export const cells: Cell[] = [
     image: "/amor-perfeito.jpg",
     color: "#BE185D",
     icon: "handshake",
+    whatsapp: "5548991361311",
   },
   {
     id: "jardim-da-emunah",
-    name: "Jardim da Emunah",
+    name: "Jardim da Emuná",
     day: "Quarta-feira",
     time: "20h",
     address: "Rua Carlos Kirch, 160 · Passa Vinte, Palhoça - SC",
     description: "Um jardim de fé onde a esperança cria raízes e floresce.",
     coordinates: [-27.6380, -48.6740],
-    image: "/jardim-emunah.png",
+    image: "/emuna.jpg",
     color: "#4D7C0F",
     icon: "tree",
+    whatsapp: "5548999013089",
   },
   {
-    id: "mulheres-enraizadas",
-    name: "Mulheres Enraizadas",
-    day: "Sexta-feira",
+    id: "shalom",
+    name: "Célula Shalom",
+    day: "Segunda-feira",
     time: "20h",
-    address: "Rua Rodolfo Weiss, 49 · Sobrado 3, Aririú, Palhoça - SC",
-    description: "Um encontro de mulheres para criar raízes profundas na fé e na amizade.",
-    coordinates: [-27.6697, -48.6844],
-    image: "/mulheres-enraizadas.jpg",
-    color: "#7C3AED",
-    icon: "sprout",
+    address: "Rua Ferrara, 133 · Pagani, Palhoça - SC",
+    description: "Um encontro para criar laços, crescer na fé e caminhar junto.",
+    coordinates: [-27.6434674, -48.6774487],
+    image: "/shalom.jpeg",
+    color: "#256D5A",
+    icon: "cross",
+    whatsapp: "5548991532414",
   },
 ];
